@@ -1,5 +1,5 @@
 /* ============================================================
-   HABIB_XYZ — Demon Slayer portfolio interactions
+   HABIB_XYZ — Web3 Growth Strategist · interactions
    ============================================================ */
 (function () {
   "use strict";
@@ -7,38 +7,32 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ==========================================================
-     1. FALLING PETALS (wisteria-sakura style)
+     1. DRIFTING PARTICLES (very subtle — depth, not decoration)
      ========================================================== */
   var canvas = document.getElementById("petal-canvas");
   var ctx = canvas.getContext("2d");
   var W = 0, H = 0, dpr = 1;
-  var rafId = null;
 
-  var COLORS = ["#c9a6f5", "#e3cdf9", "#f0a500", "#ffd45e", "#8ff0dc", "#ffffff"];
-  var petals = [];
+  var COLORS = ["#b9a3ff", "#c9a44c", "#ffffff", "#3fbf95"];
+  var dots = [];
 
-  function seed() {
-    petals = [];
-    var n = Math.max(18, Math.round(window.innerWidth / 70));
-    for (var i = 0; i < n; i++) {
-      petals.push(makePetal(Math.random() * H));
-    }
-  }
-
-  function makePetal(startY) {
+  function makeDot(y) {
     return {
       x: Math.random() * W,
-      y: startY === undefined ? -20 - Math.random() * H : startY,
-      r: 3 + Math.random() * 5,
-      sp: 0.35 + Math.random() * 0.9,
-      drift: (Math.random() - 0.5) * 0.5,
-      sway: 0.6 + Math.random() * 1.4,
+      y: y === undefined ? -10 - Math.random() * H * 0.6 : y,
+      r: 0.7 + Math.random() * 1.5,
+      sp: 0.12 + Math.random() * 0.34,
+      dx: (Math.random() - 0.5) * 0.22,
       ph: Math.random() * Math.PI * 2,
-      rot: Math.random() * Math.PI * 2,
-      vr: (Math.random() - 0.5) * 0.03,
-      a: 0.25 + Math.random() * 0.5,
+      a: 0.10 + Math.random() * 0.28,
       c: COLORS[(Math.random() * COLORS.length) | 0]
     };
+  }
+
+  function seed() {
+    dots = [];
+    var n = Math.max(14, Math.round(window.innerWidth / 110));
+    for (var i = 0; i < n; i++) dots.push(makeDot(Math.random() * H));
   }
 
   function resize() {
@@ -52,62 +46,50 @@
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
-  function petalPath(p) {
-    ctx.beginPath();
-    ctx.moveTo(0, -p.r);
-    ctx.quadraticCurveTo(p.r * 0.95, -p.r * 0.35, 0, p.r);
-    ctx.quadraticCurveTo(-p.r * 0.95, -p.r * 0.35, 0, -p.r);
-    ctx.closePath();
-  }
-
-  function draw() {
+  function frame() {
     ctx.clearRect(0, 0, W, H);
 
-    for (var i = 0; i < petals.length; i++) {
-      var p = petals[i];
-      p.y += p.sp;
-      p.x += p.drift + Math.sin(p.y * 0.012 + p.ph) * p.sway;
-      p.rot += p.vr;
+    for (var i = 0; i < dots.length; i++) {
+      var d = dots[i];
+      d.y -= d.sp;
+      d.x += d.dx + Math.sin(d.y * 0.008 + d.ph) * 0.16;
 
-      if (p.y > H + 24) petals[i] = makePetal(-20 - Math.random() * 80);
-      if (p.x < -30) p.x = W + 20;
-      if (p.x > W + 30) p.x = -20;
+      if (d.y < -12) dots[i] = makeDot(H + 12);
+      if (d.x < -12) d.x = W + 10;
+      if (d.x > W + 12) d.x = -10;
 
-      ctx.save();
-      ctx.translate(p.x, p.y);
-      ctx.rotate(p.rot);
-      ctx.globalAlpha = p.a;
-      ctx.fillStyle = p.c;
-      ctx.shadowColor = p.c;
-      ctx.shadowBlur = 6;
-      petalPath(p);
+      ctx.globalAlpha = d.a;
+      ctx.fillStyle = d.c;
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
       ctx.fill();
-      ctx.restore();
     }
-
-    rafId = window.requestAnimationFrame(draw);
+    ctx.globalAlpha = 1;
+    window.requestAnimationFrame(frame);
   }
 
   resize();
   seed();
-  if (!reduceMotion) draw();
-  else ctx.clearRect(0, 0, W, H);
+  if (reduceMotion) ctx.clearRect(0, 0, W, H);
+  else frame();
 
   /* ==========================================================
      2. SCROLL REVEAL
      ========================================================== */
   var revealTargets = document.querySelectorAll(
-    ".card, .tech, .stat, .contact-card, .slayer-note, .kokyu-col, .quote, .section-title, .section-sub, .slayer-card, .blade"
+    ".work-card, .card, .svc, .stack-col, .pull, .contact-card, .sec-head, .portrait, .metrics"
   );
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
 
   function show(el) {
     el.classList.add("is-visible");
+    /* fail-safe: never leave content invisible if the entrance
+       animation is dropped by the renderer */
     window.setTimeout(function () {
       if (parseFloat(getComputedStyle(el).opacity) < 0.9) {
         el.classList.add("reveal-done");
       }
-    }, 1500);
+    }, 1400);
   }
 
   if ("IntersectionObserver" in window && !reduceMotion) {
@@ -117,10 +99,10 @@
         show(entry.target);
         ro.unobserve(entry.target);
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -50px 0px" });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
 
     revealTargets.forEach(function (el, i) {
-      el.style.animationDelay = (i % 3) * 90 + "ms";
+      el.style.animationDelay = (i % 4) * 60 + "ms";
       ro.observe(el);
     });
   } else {
@@ -138,17 +120,17 @@
     var target = parseFloat(el.getAttribute("data-count"));
     var suffix = el.getAttribute("data-suffix") || "";
     var start = null;
-    var dur = 1600;
+    var dur = 1500;
 
-    function frame(ts) {
+    function tick(ts) {
       if (start === null) start = ts;
       var p = Math.min((ts - start) / dur, 1);
       var eased = 1 - Math.pow(1 - p, 3);
       el.textContent = fmt(target * eased) + suffix;
-      if (p < 1) window.requestAnimationFrame(frame);
+      if (p < 1) window.requestAnimationFrame(tick);
       else el.textContent = fmt(target) + suffix;
     }
-    window.requestAnimationFrame(frame);
+    window.requestAnimationFrame(tick);
   }
 
   var counters = document.querySelectorAll("[data-count]");
@@ -158,8 +140,7 @@
         if (!entry.isIntersecting) return;
         var el = entry.target;
         if (reduceMotion) {
-          el.textContent =
-            fmt(parseFloat(el.getAttribute("data-count"))) +
+          el.textContent = fmt(parseFloat(el.getAttribute("data-count"))) +
             (el.getAttribute("data-suffix") || "");
         } else {
           countUp(el);
@@ -171,85 +152,7 @@
   }
 
   /* ==========================================================
-     4. PARALLAX — slash divider + moon react to scroll
-     ========================================================== */
-  if (!reduceMotion) {
-    var divider = document.querySelector(".slash-divider");
-    var moon = document.querySelector(".moon");
-    var aura = document.querySelector(".aura");
-    var ticking = false;
-
-    function onScroll() {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(function () {
-        var y = window.scrollY;
-        if (divider) divider.style.transform = "translateY(" + (y * 0.06) + "px)";
-        if (moon) moon.style.marginTop = (y * 0.05) + "px";
-        if (aura) aura.style.transform = "translateY(" + (y * 0.03) + "px)";
-        ticking = false;
-      });
-    }
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
-
-  /* ==========================================================
-     5. TILT on the slayer card (pointer devices)
-     ========================================================== */
-  var card = document.querySelector(".slayer-card");
-  if (card && !reduceMotion && window.matchMedia("(pointer:fine)").matches) {
-    var wrap = document.querySelector(".hero-visual");
-    var idle = null;
-
-    wrap.addEventListener("mousemove", function (e) {
-      if (idle) { window.clearTimeout(idle); idle = null; }
-      var r = wrap.getBoundingClientRect();
-      var dx = (e.clientX - r.left) / r.width - 0.5;
-      var dy = (e.clientY - r.top) / r.height - 0.5;
-      card.style.animation = "none";
-      card.style.transform =
-        "perspective(1100px) rotateY(" + dx * 16 + "deg) rotateX(" + -dy * 16 + "deg) rotate(-1deg)";
-    });
-
-    wrap.addEventListener("mouseleave", function () {
-      idle = window.setTimeout(function () {
-        card.style.transform = "";
-        card.style.animation = "";
-      }, 60);
-    });
-  }
-
-  /* ==========================================================
-     6. TYPEWRITER
-     ========================================================== */
-  var tw = document.querySelector("[data-typewriter]");
-  if (tw && !reduceMotion) {
-    var words = tw.getAttribute("data-typewriter").split("|");
-    var w = 0, c = 0, deleting = false;
-
-    (function type() {
-      var word = words[w];
-      tw.textContent = word.slice(0, c);
-
-      if (!deleting && c < word.length) {
-        c++;
-        window.setTimeout(type, 90);
-      } else if (!deleting && c === word.length) {
-        deleting = true;
-        window.setTimeout(type, 1500);
-      } else if (deleting && c > 0) {
-        c--;
-        window.setTimeout(type, 45);
-      } else {
-        deleting = false;
-        w = (w + 1) % words.length;
-        window.setTimeout(type, 320);
-      }
-    })();
-  }
-
-  /* ==========================================================
-     7. ACTIVE NAV HIGHLIGHT
+     4. ACTIVE NAV
      ========================================================== */
   var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
   var sections = navLinks
@@ -262,15 +165,17 @@
         if (!entry.isIntersecting) return;
         var id = "#" + entry.target.id;
         navLinks.forEach(function (a) {
-          a.style.color = a.getAttribute("href") === id ? "#fff" : "";
+          var on = a.getAttribute("href") === id;
+          a.style.color = on ? "var(--text)" : "";
+          a.style.background = on ? "rgba(230,220,255,.06)" : "";
         });
       });
-    }, { rootMargin: "-45% 0px -50% 0px" });
+    }, { rootMargin: "-40% 0px -55% 0px" });
     sections.forEach(function (s) { no.observe(s); });
   }
 
   /* ==========================================================
-     8. RESIZE
+     5. RESIZE
      ========================================================== */
   var rt = null;
   window.addEventListener("resize", function () {
@@ -282,7 +187,7 @@
   });
 
   /* ==========================================================
-     9. FOOTER YEAR
+     6. FOOTER YEAR
      ========================================================== */
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();
