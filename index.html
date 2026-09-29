@@ -3,106 +3,166 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>HABIB_XYZ — Web3 Growth Strategist</title>
-<meta name="description" content="HABIB_XYZ — Web3 Growth Strategist. Content creator, researcher and airdrop hunter. Binance & Creator Wire creator, 50+ campaigns supported, 100K+ estimated reach." />
-<meta name="theme-color" content="#f7f6fb" />
-<meta name="author" content="HABIB_XYZ" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="HABIB_XYZ — Web3 Growth Strategist" />
-<meta property="og:description" content="Content creator, researcher and airdrop hunter. Binance & Creator Wire creator." />
-<meta property="og:image" content="assets/avatar.jpg" />
+<title>HABIB_XYZ | Web3 Growth Strategist | 鬼滅</title>
+<meta name="description" content="HABIB_XYZ, Web3 Growth Strategist. Turning visibility into real growth through strategic content, community expansion, ecosystem storytelling and creator-led distribution." />
+<meta name="theme-color" content="#0a0713" />
 <link rel="icon" href="assets/avatar.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Inter:wght@400;500;600;700;800;900&family=Shippori+Mincho:wght@600;700;800&family=Zen+Antique&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="mesh" aria-hidden="true">
-  <span class="blob blob-a"></span>
-  <span class="blob blob-b"></span>
-  <span class="blob blob-c"></span>
-  <span class="mesh-noise"></span>
-</div>
-<div class="spotlight" aria-hidden="true"></div>
-<div class="scroll-progress" aria-hidden="true"><span data-progress></span></div>
+<!-- ======= AMBIENT LAYERS ======= -->
+<canvas id="petal-canvas" aria-hidden="true"></canvas>
+<div class="moon" aria-hidden="true"></div>
+<div class="moon-halo" aria-hidden="true"></div>
+<div class="mist mist-1" aria-hidden="true"></div>
+<div class="mist mist-2" aria-hidden="true"></div>
+<div class="fireflies" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
+<!-- ======= NAV ======= -->
 <header class="topbar">
-  <a class="brand" href="#top">
-    <span class="brand-mark" aria-hidden="true"></span>
-    <span class="brand-text">HABIB<em>_XYZ</em></span>
+  <a class="brand" href="#hero">
+    <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+      <path d="M8 33 30 6" stroke="#c9a6f5" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M24 6h8v8" stroke="#c9a6f5" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M6 27h10M8 31h10" stroke="#f0a500" stroke-width="2.4" stroke-linecap="round"/>
+    </svg>
+    <span>鬼滅 &nbsp;HABIB_XYZ</span>
   </a>
   <nav class="nav" aria-label="Main navigation">
-    <span class="nav-pill" data-pill aria-hidden="true"></span>
-    <a href="#work">Work</a>
-    <a href="#profile">Profile</a>
-    <a href="#services">Services</a>
-    <a href="#stack">Stack</a>
-    <a href="#contact">Contact</a>
+    <a href="#hero">入口</a>
+    <a href="#slayer">鬼</a>
+    <a href="#work">実績</a>
+    <a href="#breath">技</a>
+    <a href="#kokyu">呼吸法</a>
+    <a href="#reach">戦</a>
+    <a href="#contact">談</a>
   </nav>
-  <a class="nav-cta" href="https://x.com/Habib_XYZ8" target="_blank" rel="noopener" data-magnetic>
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 3h3l-6.6 7.5L21.7 21h-6.1l-4.8-6.3L5.3 21h-3l7.1-8.1L2.5 3h6.2l4.3 5.7L17.5 3Zm-1.1 16h1.7L7.7 4.9H5.9L16.4 19Z" fill="currentColor"/></svg>
-    @Habib_XYZ8
-  </a>
+  <a class="btn btn-small" href="https://x.com/Habib_XYZ8" target="_blank" rel="noopener">@Habib_XYZ8</a>
 </header>
 
-<main id="top">
-
 <!-- ======= HERO ======= -->
-<section class="hero">
-  <div class="wrap hero-inner">
+<section id="hero" class="hero">
+  <div class="hero-inner">
 
     <div class="hero-copy">
-      <p class="eyebrow reveal" data-d="0">
-        <span class="pulse-dot" aria-hidden="true"></span>
-        Open to Web3 campaigns
+      <p class="eyebrow">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20 18 4M14 4h6v6" stroke="#c9a6f5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 17h7M3 21h9" stroke="#f0a500" stroke-width="2" stroke-linecap="round"/></svg>
+        鬼滅の刃 &nbsp;·&nbsp; Official Web3 Profile
       </p>
 
-      <h1 class="hero-name reveal" data-d="1">HABIB<span>_XYZ</span></h1>
+      <h1 class="hero-name" aria-label="HABIB">
+        <span class="ch">H</span><span class="ch">A</span><span class="ch">B</span><span class="ch">I</span><span class="ch">B</span>
+      </h1>
 
-      <p class="hero-role reveal" data-d="2">
-        <span data-typer="Content Creator|Researcher|Airdrop Hunter|Growth Strategist"></span><span class="typer-caret" aria-hidden="true"></span>
+      <p class="hero-kanji" aria-hidden="true">滅</p>
+
+      <p class="hero-role">Web3 <strong>Growth Strategist</strong></p>
+
+      <p class="hero-tw" aria-live="polite">
+        Currently breathing: <span class="hero-tw-word" data-typewriter="Total Concentration|Content Strategy|Community Expansion|Ecosystem Storytelling"></span><span class="caret" aria-hidden="true"></span>
       </p>
 
-      <p class="hero-lede reveal" data-d="3">
-        I help Web3 ecosystems turn visibility into measurable growth — through
-        strategic content, community expansion, and creator-led distribution.
+      <p class="hero-tagline">
+        Building <em>Web3 attention</em>.<br />
+        Turning visibility into real growth: content, community, distribution.
       </p>
 
-      <p class="hero-sub reveal" data-d="4">
-        From project deep-dives and launch campaigns to ecosystem amplification and
-        organic user acquisition, my focus is getting the right project in front of
-        the right audience.
-      </p>
+      <div class="hero-cta">
+        <a class="btn btn-blade" href="https://t.me/Habib_XYZ8" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5Zm1.6.3L12 12l7.4-5.2ZM4 8.9V17h16V8.9l-8 5.6Z" fill="#140b26"/></svg>
+          Collaborate
+        </a>
+        <a class="btn btn-scroll" href="#breath">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v13m0 0 4.5-4.5M12 16l-4.5-4.5" stroke="#f0a500" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Read the Techniques
+        </a>
+      </div>
 
-      <div class="hero-actions reveal" data-d="5">
-        <a class="btn btn-primary" href="https://t.me/Habib_XYZ8" target="_blank" rel="noopener" data-magnetic>Work with me</a>
-        <a class="btn btn-ghost" href="#work" data-magnetic>See proof of work</a>
+      <ul class="hero-tags" aria-label="Focus areas">
+        <li>Web3</li>
+        <li>Growth</li>
+        <li>Content</li>
+        <li>Community</li>
+        <li>Creator-Led</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual">
+      <!-- breathing aura -->
+      <div class="aura" aria-hidden="true">
+        <span class="aura-ring r1"></span>
+        <span class="aura-ring r2"></span>
+        <span class="aura-ring r3"></span>
+      </div>
+
+      <!-- nichirin blade -->
+      <div class="blade" aria-hidden="true">
+        <svg viewBox="0 0 260 60">
+          <path class="bl-edge" d="M14 46 236 6l12 3-222 42Z"/>
+          <path class="bl-core" d="M22 47 232 10"/>
+          <path class="bl-grip" d="M8 47h22M6 53h26"/>
+        </svg>
+      </div>
+
+      <!-- character card -->
+      <div class="slayer-card" role="img" aria-label="HABIB_XYZ, Web3 Growth Strategist">
+        <div class="sc-head">
+          <span class="sc-rank">伍</span>
+          <span class="sc-eyebrow">鬼滅 / OFFICIAL</span>
+        </div>
+        <div class="sc-photo">
+          <img src="assets/avatar.jpg" alt="HABIB_XYZ" width="400" height="400" />
+          <span class="scanline" aria-hidden="true"></span>
+          <span class="hanko" aria-hidden="true">滅</span>
+        </div>
+        <p class="sc-name">“HABIB_XYZ”</p>
+        <p class="sc-alias">AKA “THE GROWTH HASHIRA”</p>
+        <p class="sc-note">Web3 Growth Strategist</p>
+        <div class="sc-breath" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
       </div>
     </div>
 
-    <aside class="hero-aside reveal" data-d="3">
-      <div class="portrait" data-tilt>
-        <div class="portrait-frame">
-          <img src="assets/avatar.jpg" alt="HABIB_XYZ" width="400" height="400" />
-          <span class="portrait-ring" aria-hidden="true"></span>
-        </div>
-        <ul class="portrait-meta">
-          <li><span>Role</span><strong>Growth Strategist</strong></li>
-          <li><span>Programs</span><strong>Binance · Creator Wire</strong></li>
-          <li><span>Focus</span><strong>Web3 Ecosystem Growth</strong></li>
-        </ul>
-      </div>
-    </aside>
-
   </div>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track" data-marquee>
-      <span>Web3 Growth Strategy</span><i>✦</i><span>Content Architecture</span><i>✦</i>
-      <span>Community Building</span><i>✦</i><span>Airdrop Marketing</span><i>✦</i>
-      <span>KOL Collaboration</span><i>✦</i><span>Project Amplification</span><i>✦</i>
+  <div class="slash-divider" aria-hidden="true">
+    <span class="slash-line"></span>
+    <span class="slash-spark"></span>
+  </div>
+</section>
+
+<!-- ======= SLAYER ======= -->
+<section id="slayer" class="section slayer">
+  <div class="wrap">
+    <h2 class="section-title"><span class="tilt-icon" aria-hidden="true">🗡</span> The Slayer</h2>
+    <p class="section-sub">柱 &nbsp;·&nbsp; Who holds the blade, and what gets cut down.</p>
+
+    <div class="grid grid-3">
+      <article class="card card-violet">
+        <div class="card-icon" aria-hidden="true">🗡</div>
+        <h3>Growth Strategist</h3>
+        <p>I help Web3 ecosystems transform visibility into real growth through campaign planning, audience targeting, and narrative positioning.</p>
+      </article>
+
+      <article class="card card-flame">
+        <div class="card-icon" aria-hidden="true">🔥</div>
+        <h3>Content Architect</h3>
+        <p>Project deep-dives, launch campaigns, threads and ecosystem breakdowns: content built to be read, shared and remembered.</p>
+      </article>
+
+      <article class="card card-jade">
+        <div class="card-icon" aria-hidden="true">⛩</div>
+        <h3>Community Builder</h3>
+        <p>Turning social impressions into active Telegram and Discord communities through strategic engagement, not empty numbers.</p>
+      </article>
+    </div>
+
+    <div class="slayer-note">
+      <p>総 <strong>Total Concentration Breathing</strong>: trust, consistency, and meaningful community participation.</p>
     </div>
   </div>
 </section>
@@ -110,193 +170,190 @@
 <!-- ======= PROOF OF WORK ======= -->
 <section id="work" class="section work">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <p class="sec-kicker"><span class="kicker-line" aria-hidden="true"></span>Selected work</p>
-      <h2 class="sec-title">Proof of Work <span class="sec-title-dim">&amp; Collaborations</span></h2>
-      <p class="sec-sub">Campaigns, creator programs and research threads — published on X.</p>
-    </header>
+    <h2 class="section-title"><span class="tilt-icon" aria-hidden="true">⚔</span> 実績 &nbsp;Proof of Work</h2>
+    <p class="section-sub">戦歴 &nbsp;·&nbsp; Campaigns, creator programs and research threads, published on <a href="https://x.com/Habib_XYZ8" target="_blank" rel="noopener">@Habib_XYZ8</a>.</p>
 
     <div class="work-grid">
 
-      <article class="work-card is-featured" data-spotlight>
-        <div class="wc-top">
-          <span class="wc-type">Partnership</span>
-          <time class="wc-date" datetime="2026-09-22">22 Sep 2026</time>
+      <article class="work is-featured">
+        <div class="work-top">
+          <span class="work-av"><img src="assets/0xhazels.jpg" alt="" width="40" height="40" loading="lazy" /></span>
+          <span class="work-meta"><span class="work-type">Partnership</span><span class="work-handle">@0xhazels</span></span>
+          <time class="work-date" datetime="2026-09-22">22 SEP 2026</time>
         </div>
-        <h3 class="wc-title">Creator collab with 0xhazels — 10× whitelist giveaway</h3>
-        <p class="wc-text">Ran a joint follow / like / repost campaign across both audiences and managed 10 whitelist slots for the community.</p>
-        <div class="wc-stats">
-          <span><strong>10×</strong> whitelist slots</span>
+        <h3>Creator collab with 0xhazels: 10× whitelist giveaway</h3>
+        <p>Ran a joint follow / like / repost campaign across both audiences and managed 10 whitelist slots for the community.</p>
+        <div class="work-stats">
+          <span><strong>10×</strong> WL slots</span>
           <span><strong>136</strong> likes</span>
           <span><strong>2.5K</strong> views</span>
         </div>
-        <a class="wc-link" href="https://x.com/Habib_XYZ8/status/2102540544006328561" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
+        <a class="work-link" href="https://x.com/Habib_XYZ8/status/2102540544006328561" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="work-card is-featured" data-spotlight>
-        <div class="wc-top">
-          <span class="wc-type">Campaign</span>
-          <time class="wc-date" datetime="2026-09-21">21 Sep 2026</time>
+      <article class="work is-featured">
+        <div class="work-top">
+          <span class="work-av"><img src="assets/sumex.jpg" alt="" width="40" height="40" loading="lazy" /></span>
+          <span class="work-meta"><span class="work-type">Campaign</span><span class="work-handle">@Sumex_Labs</span></span>
+          <time class="work-date" datetime="2026-09-21">21 SEP 2026</time>
         </div>
-        <h3 class="wc-title">Sumex × XGram — $5,000 swap campaign relaunch</h3>
-        <p class="wc-text">Flagged the campaign reopening after the XGram issue was fixed, then broke down the prize tiers and the qualifying routes.</p>
-        <div class="wc-stats">
+        <h3>Sumex × XGram: $5,000 swap campaign relaunch</h3>
+        <p>Flagged the campaign reopening after the XGram issue was fixed, then broke down the prize tiers and the qualifying routes.</p>
+        <div class="work-stats">
           <span><strong>$5K</strong> prize pool</span>
           <span><strong>158</strong> likes</span>
           <span><strong>2.8K</strong> views</span>
         </div>
-        <a class="wc-link" href="https://x.com/Habib_XYZ8/status/2102052517639323904" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
+        <a class="work-link" href="https://x.com/Habib_XYZ8/status/2102052517639323904" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="work-card is-wide" data-spotlight>
-        <div class="wc-top">
-          <span class="wc-type">Research</span>
-          <time class="wc-date" datetime="2026-09-19">19 Sep 2026</time>
+      <article class="work is-wide">
+        <div class="work-top">
+          <span class="work-av"><img src="assets/vibevibe.jpg" alt="" width="40" height="40" loading="lazy" /></span>
+          <span class="work-meta"><span class="work-type">Research</span><span class="work-handle">@vibevibefun</span></span>
+          <time class="work-date" datetime="2026-09-19">19 SEP 2026</time>
         </div>
-        <h3 class="wc-title">vibe vibers — full quant-agent NFT breakdown</h3>
-        <p class="wc-text">
-          Long-form research thread on the Robinhood Chain collection: how SPARK unlocks
-          free mints, the four-step fee loop funding a tokenized AI stock basket, how NFT
-          level affects the airdrop split, and where holders can still enter — including
-          the risk disclaimer.
-        </p>
-        <div class="wc-stats">
+        <h3>vibe vibers: full quant-agent NFT breakdown</h3>
+        <p>Long-form research thread on the Robinhood Chain collection: how SPARK unlocks free mints, the four-step fee loop funding a tokenized AI stock basket, how NFT level affects the airdrop split, and where holders can still enter, including the risk disclaimer.</p>
+        <div class="work-stats">
           <span><strong>183</strong> likes</span>
           <span><strong>179</strong> replies</span>
           <span><strong>3.4K</strong> views</span>
         </div>
-        <a class="wc-link" href="https://x.com/Habib_XYZ8/status/2101220548860604707" target="_blank" rel="noopener">Read the thread <span aria-hidden="true">↗</span></a>
+        <a class="work-link" href="https://x.com/Habib_XYZ8/status/2101220548860604707" target="_blank" rel="noopener">Read the thread <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="work-card" data-spotlight>
-        <div class="wc-top">
-          <span class="wc-type">On-chain</span>
-          <time class="wc-date" datetime="2026-09-16">16 Sep 2026</time>
+      <article class="work">
+        <div class="work-top">
+          <span class="work-av"><img src="assets/akadotfun.jpg" alt="" width="40" height="40" loading="lazy" /></span>
+          <span class="work-meta"><span class="work-type">On-chain</span><span class="work-handle">@akadotfun</span></span>
+          <time class="work-date" datetime="2026-09-16">16 SEP 2026</time>
         </div>
-        <h3 class="wc-title">First mint on Arc — $50 into $245</h3>
-        <p class="wc-text">Minted three akadotfun NFTs on Arc, sold one, still holding two. Documented the entry, the exit and the open position live.</p>
-        <div class="wc-stats">
+        <h3>First mint on Arc: $50 into $245</h3>
+        <p>Minted three akadotfun NFTs on Arc, sold one, still holding two. Documented the entry, the exit and the open position live.</p>
+        <div class="work-stats">
           <span><strong>$50 → $245</strong></span>
           <span><strong>90</strong> likes</span>
           <span><strong>3.0K</strong> views</span>
         </div>
-        <a class="wc-link" href="https://x.com/Habib_XYZ8/status/2100289727857606690" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
+        <a class="work-link" href="https://x.com/Habib_XYZ8/status/2100289727857606690" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="work-card" data-spotlight>
-        <div class="wc-top">
-          <span class="wc-type">Alert</span>
-          <time class="wc-date" datetime="2026-09-11">11 Sep 2026</time>
+      <article class="work">
+        <div class="work-top">
+          <span class="work-av"><img src="assets/akadotfun.jpg" alt="" width="40" height="40" loading="lazy" /></span>
+          <span class="work-meta"><span class="work-type">Alert</span><span class="work-handle">@akadotfun</span></span>
+          <time class="work-date" datetime="2026-09-11">11 SEP 2026</time>
         </div>
-        <h3 class="wc-title">akadotfun on Arc — first DN404, 2,222 spots</h3>
-        <p class="wc-text">Early alert on the first DN404 launching on Arc. Covered the NFT-plus-token structure, the 47K+ registrations and the GTD versus FCFS risk.</p>
-        <div class="wc-stats">
+        <h3>akadotfun on Arc: first DN404, 2,222 spots</h3>
+        <p>Early alert on the first DN404 launching on Arc. Covered the NFT-plus-token structure, the 47K+ registrations and the GTD versus FCFS risk.</p>
+        <div class="work-stats">
           <span><strong>2,222</strong> spots</span>
           <span><strong>192</strong> likes</span>
           <span><strong>3.4K</strong> views</span>
         </div>
-        <a class="wc-link" href="https://x.com/Habib_XYZ8/status/2098269906307572150" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
+        <a class="work-link" href="https://x.com/Habib_XYZ8/status/2098269906307572150" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="work-card" data-spotlight>
-        <div class="wc-top">
-          <span class="wc-type">Creator Program</span>
-          <time class="wc-date" datetime="2026-09-02">02 Sep 2026</time>
+      <article class="work">
+        <div class="work-top">
+          <span class="work-av"><img src="assets/avatar.jpg" alt="" width="40" height="40" loading="lazy" /></span>
+          <span class="work-meta"><span class="work-type">Creator Program</span><span class="work-handle">Creator Wire</span></span>
+          <time class="work-date" datetime="2026-09-02">02 SEP 2026</time>
         </div>
-        <h3 class="wc-title">Approved as a Creator Wire creator</h3>
-        <p class="wc-text">Selected into the Creator Wire program and shared the selection with the audience, opening the door for new campaign briefs.</p>
-        <div class="wc-stats">
+        <h3>Approved as a Creator Wire creator</h3>
+        <p>Selected into the Creator Wire program and shared the selection with the audience, opening the door for new campaign briefs.</p>
+        <div class="work-stats">
           <span><strong>172</strong> likes</span>
           <span><strong>8</strong> reposts</span>
           <span><strong>1.5K</strong> views</span>
         </div>
-        <a class="wc-link" href="https://x.com/Habib_XYZ8/status/2095097572331540833" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
+        <a class="work-link" href="https://x.com/Habib_XYZ8/status/2095097572331540833" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="work-card" data-spotlight>
-        <div class="wc-top">
-          <span class="wc-type">Creator Program</span>
-          <time class="wc-date" datetime="2026-08-28">28 Aug 2026</time>
+      <article class="work">
+        <div class="work-top">
+          <span class="work-av"><img src="assets/binance.jpg" alt="" width="40" height="40" loading="lazy" /></span>
+          <span class="work-meta"><span class="work-type">Creator Program</span><span class="work-handle">@binance</span></span>
+          <time class="work-date" datetime="2026-08-28">28 AUG 2026</time>
         </div>
-        <h3 class="wc-title">Selected as a Binance creator</h3>
-        <p class="wc-text">Accepted into the Binance creator program — one of the largest exchange programs in crypto — and shared the milestone publicly.</p>
-        <div class="wc-stats">
+        <h3>Selected as a Binance creator</h3>
+        <p>Accepted into the Binance creator program, one of the largest exchange programs in crypto, and shared the milestone publicly.</p>
+        <div class="work-stats">
           <span><strong>167</strong> likes</span>
           <span><strong>2.6K</strong> views</span>
         </div>
-        <a class="wc-link" href="https://x.com/Habib_XYZ8/status/2093285066634088586" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
+        <a class="work-link" href="https://x.com/Habib_XYZ8/status/2093285066634088586" target="_blank" rel="noopener">View post <span aria-hidden="true">↗</span></a>
       </article>
 
-    </div>
-
-    <div class="work-foot reveal">
-      <a class="btn btn-ghost" href="https://x.com/Habib_XYZ8" target="_blank" rel="noopener" data-magnetic>See the full timeline on X</a>
     </div>
   </div>
 </section>
 
-<!-- ======= PROFILE ======= -->
-<section id="profile" class="section profile">
+<!-- ======= TECHNIQUES ======= -->
+<section id="breath" class="section breath">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <p class="sec-kicker"><span class="kicker-line" aria-hidden="true"></span>The person behind it</p>
-      <h2 class="sec-title">Profile</h2>
-      <p class="sec-sub">Three roles that run together on every campaign.</p>
-    </header>
+    <h2 class="section-title light"><span class="tilt-icon" aria-hidden="true">技</span> Techniques</h2>
+    <p class="section-sub">息の呼吸 &nbsp;·&nbsp; What I Provide: strategic growth solutions combining creator influence, community engagement and high-converting content distribution.</p>
 
-    <div class="grid grid-3">
-      <article class="card" data-spotlight>
-        <span class="card-num">01</span>
-        <h3>Growth Strategist</h3>
-        <p>Campaign planning, audience targeting and narrative positioning — turning a project's story into a distribution plan that lands.</p>
+    <div class="grid grid-3 tech-grid">
+
+      <article class="tech tech-violet">
+        <span class="tech-idx">壱</span>
+        <h3>Growth Strategy</h3>
+        <p>Helping projects grow awareness through campaign planning, audience targeting, and narrative positioning.</p>
+        <span class="tech-glyph" aria-hidden="true">✦</span>
       </article>
-      <article class="card" data-spotlight>
-        <span class="card-num">02</span>
-        <h3>Content Architect</h3>
-        <p>Project deep-dives, launch threads and ecosystem breakdowns. Written to be read, saved and shared by the people already in the space.</p>
+
+      <article class="tech tech-flame">
+        <span class="tech-idx">弐</span>
+        <h3>Content Creation</h3>
+        <p>Creating engaging Web3 content, project reviews, ecosystem breakdowns, and educational threads.</p>
+        <span class="tech-glyph" aria-hidden="true">◎</span>
       </article>
-      <article class="card" data-spotlight>
-        <span class="card-num">03</span>
-        <h3>Community Builder</h3>
-        <p>Converting social impressions into active Telegram and Discord communities through real engagement, not vanity numbers.</p>
+
+      <article class="tech tech-jade">
+        <span class="tech-idx">参</span>
+        <h3>Community Building</h3>
+        <p>Turning social impressions into active Telegram and Discord communities through strategic engagement.</p>
+        <span class="tech-glyph" aria-hidden="true">↗</span>
       </article>
+
+      <article class="tech tech-flame">
+        <span class="tech-idx">肆</span>
+        <h3>Airdrop Marketing</h3>
+        <p>Supporting launches, testnets, and ecosystem campaigns with targeted audience activation.</p>
+        <span class="tech-glyph" aria-hidden="true">⚡</span>
+      </article>
+
+      <article class="tech tech-violet">
+        <span class="tech-idx">伍</span>
+        <h3>KOL Collaboration</h3>
+        <p>Working with creator networks and allied Web3 communities to maximize ecosystem visibility.</p>
+        <span class="tech-glyph" aria-hidden="true">✪</span>
+      </article>
+
+      <article class="tech tech-jade">
+        <span class="tech-idx">陸</span>
+        <h3>Project Amplification</h3>
+        <p>Scaling awareness for early-stage Web3 ecosystems through narrative-focused distribution.</p>
+        <span class="tech-glyph" aria-hidden="true">◉</span>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- ======= SERVICES ======= -->
-<section id="services" class="section services">
+<!-- ======= CORE COMPETENCIES / KOKYU ======= -->
+<section id="kokyu" class="section kokyu">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <p class="sec-kicker"><span class="kicker-line" aria-hidden="true"></span>What I provide</p>
-      <h2 class="sec-title">Services</h2>
-      <p class="sec-sub">Creator influence, community engagement and content distribution — combined into one growth engine.</p>
-    </header>
+    <h2 class="section-title"><span class="tilt-icon" aria-hidden="true">🌀</span> Core Competencies</h2>
+    <p class="section-sub">技能 &amp; Stack &nbsp;·&nbsp; Skills &amp; Stack</p>
 
-    <div class="grid grid-3">
-      <article class="svc" data-spotlight><h3>Growth Strategy</h3><p>Helping projects grow awareness through campaign planning, audience targeting, and narrative positioning.</p></article>
-      <article class="svc" data-spotlight><h3>Content Creation</h3><p>Creating engaging Web3 content, project reviews, ecosystem breakdowns, and educational threads.</p></article>
-      <article class="svc" data-spotlight><h3>Community Building</h3><p>Turning social impressions into active Telegram and Discord communities through strategic engagement.</p></article>
-      <article class="svc" data-spotlight><h3>Airdrop Marketing</h3><p>Supporting launches, testnets, and ecosystem campaigns with targeted audience activation.</p></article>
-      <article class="svc" data-spotlight><h3>KOL Collaboration</h3><p>Working with creator networks and allied Web3 communities to maximize ecosystem visibility.</p></article>
-      <article class="svc" data-spotlight><h3>Project Amplification</h3><p>Scaling awareness for early-stage Web3 ecosystems through narrative-focused distribution.</p></article>
-    </div>
-  </div>
-</section>
-
-<!-- ======= STACK ======= -->
-<section id="stack" class="section stack">
-  <div class="wrap">
-    <header class="sec-head reveal">
-      <p class="sec-kicker"><span class="kicker-line" aria-hidden="true"></span>Capabilities</p>
-      <h2 class="sec-title">Skills &amp; Stack</h2>
-      <p class="sec-sub">What sits behind the deliverables.</p>
-    </header>
-
-    <div class="stack-grid">
-      <div class="stack-col reveal">
-        <p class="stack-label">Core competencies</p>
-        <ul class="chip-list">
+    <div class="kokyu-grid">
+      <div class="kokyu-col">
+        <p class="kokyu-label">Web3 Content Architecture</p>
+        <ul class="skill-list">
           <li>Web3 Content Architecture</li>
           <li>Organic User Acquisition</li>
           <li>Twitter/X Thread Strategy</li>
@@ -307,71 +364,82 @@
           <li>Affiliate Marketing</li>
         </ul>
       </div>
-      <div class="stack-col reveal">
-        <p class="stack-label">Operations</p>
-        <ul class="chip-list">
+
+      <div class="kokyu-col">
+        <p class="kokyu-label">Operations</p>
+        <ul class="skill-list">
           <li>Cross-Platform Funneling</li>
           <li>Crypto Market Trend Analysis</li>
           <li>Tool Management</li>
           <li>Community Moderation</li>
         </ul>
-
-        <div class="metrics">
-          <div class="metric">
-            <span class="metric-num" data-count="50" data-suffix="+">0</span>
-            <span class="metric-label">Campaigns supported</span>
-            <span class="metric-bar" aria-hidden="true"><i data-fill="50"></i></span>
-          </div>
-          <div class="metric">
-            <span class="metric-num" data-count="100" data-suffix="K+">0</span>
-            <span class="metric-label">Estimated reach</span>
-            <span class="metric-bar" aria-hidden="true"><i data-fill="100"></i></span>
-          </div>
+        <div class="uro-block" aria-hidden="true">
+          <span>滅</span>
         </div>
       </div>
     </div>
 
-    <blockquote class="pull reveal">
-      <p>“The strongest Web3 ecosystems are built through trust, consistency, and meaningful community participation.”</p>
-      <p class="pull-body">My goal is helping projects create authentic engagement through valuable content, strategic storytelling, and creator-focused ecosystem growth.</p>
+    <blockquote class="quote">
+      <p class="quote-jp" aria-hidden="true">“The strongest Web3 ecosystems are built through trust, consistency, and meaningful community participation.”</p>
+      <p>My goal is helping projects create authentic engagement through valuable content, strategic storytelling, and creator-focused ecosystem growth.</p>
       <cite>HABIB_XYZ</cite>
     </blockquote>
   </div>
 </section>
 
-<!-- ======= CONTACT ======= -->
-<section id="contact" class="section contact">
+<!-- ======= REACH / STATS ======= -->
+<section id="reach" class="section reach">
   <div class="wrap">
-    <div class="contact-panel reveal" data-spotlight>
-      <p class="sec-kicker"><span class="kicker-line" aria-hidden="true"></span>Get in touch</p>
-      <h2 class="sec-title">Let's build something</h2>
-      <p class="contact-sub">Available for Web3 growth campaigns, ecosystem collaborations, content partnerships, and strategic community expansion.</p>
+    <h2 class="section-title light"><span class="tilt-icon" aria-hidden="true">⚔</span> The Record</h2>
+    <p class="section-sub">戦績 &nbsp;·&nbsp; Numbers behind the breathing.</p>
 
-      <div class="contact-cards">
-        <a class="contact-card" href="https://t.me/Habib_XYZ8" target="_blank" rel="noopener" data-magnetic>
-          <span class="cc-label">Telegram</span>
-          <span class="cc-value">t.me/Habib_XYZ8</span>
-        </a>
-        <a class="contact-card" href="https://x.com/Habib_XYZ8" target="_blank" rel="noopener" data-magnetic>
-          <span class="cc-label">X / Twitter</span>
-          <span class="cc-value">x.com/Habib_XYZ8</span>
-        </a>
-        <a class="contact-card" href="mailto:habib10all10game@gmail.com" data-magnetic>
-          <span class="cc-label">Email</span>
-          <span class="cc-value">habib10all10game@gmail.com</span>
-        </a>
+    <div class="grid grid-3 stat-grid">
+      <div class="stat stat-violet">
+        <span class="stat-num" data-count="50" data-suffix="+">0</span>
+        <span class="stat-label">Campaigns Supported</span>
+      </div>
+      <div class="stat stat-flame">
+        <span class="stat-num" data-count="100" data-suffix="K+">0</span>
+        <span class="stat-label">Estimated Reach</span>
+      </div>
+      <div class="stat stat-jade">
+        <span class="stat-num stat-word" data-word="Growth">Growth</span>
+        <span class="stat-label">Growth Focused</span>
       </div>
     </div>
   </div>
 </section>
 
-</main>
+<!-- ======= CONTACT ======= -->
+<section id="contact" class="section contact">
+  <div class="wrap contact-wrap">
+    <h2 class="section-title"><span class="tilt-icon" aria-hidden="true">🤝</span> Let’s Build</h2>
+    <p class="contact-sub">Available for Web3 growth campaigns, ecosystem collaborations, content partnerships, and strategic community expansion.</p>
+
+    <div class="contact-cards">
+      <a class="contact-card" href="https://t.me/Habib_XYZ8" target="_blank" rel="noopener">
+        <span class="cc-ring" aria-hidden="true">✉</span>
+        <span class="cc-label">Contact via Telegram</span>
+        <span class="cc-value">t.me/Habib_XYZ8</span>
+      </a>
+      <a class="contact-card" href="https://x.com/Habib_XYZ8" target="_blank" rel="noopener">
+        <span class="cc-ring" aria-hidden="true">𝕏</span>
+        <span class="cc-label">Twitter / X</span>
+        <span class="cc-value">x.com/Habib_XYZ8</span>
+      </a>
+      <a class="contact-card" href="mailto:habib10all10game@gmail.com">
+        <span class="cc-ring" aria-hidden="true">✦</span>
+        <span class="cc-label">Email</span>
+        <span class="cc-value">habib10all10game@gmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
-  <div class="wrap footer-inner">
-    <p class="footer-brand">HABIB<em>_XYZ</em> — Web3 Growth Strategist</p>
-    <p class="footer-meta">© <span data-year>2026</span> &nbsp;·&nbsp; All rights reserved</p>
-  </div>
+  <div class="uro-strip" aria-hidden="true"></div>
+  <p>Operated by <strong>HABIB_XYZ</strong> · Web3 Growth Strategist</p>
+  <p class="footer-sub">© <span data-year>2026</span> · No demons were harmed in the making of this site. 鬼滅</p>
 </footer>
 
 <script src="script.js"></script>
