@@ -209,6 +209,15 @@ body > *:not(#petal-canvas):not(.moon):not(.moon-halo):not(.mist):not(.fireflies
 }
 
 
+.hero-kanji{
+  position:absolute; margin:0; z-index:1;
+  left:-2vw; top:clamp(28px, 6vw, 60px);
+  font-family:var(--font-kanji);
+  font-size:clamp(11rem, 30vw, 24rem); line-height:1;
+  color:rgba(201, 166, 245, .07);
+  pointer-events:none; user-select:none;
+}
+
 .hero-role{
   margin:0 0 16px; font-family:var(--font-jp);
   font-size:clamp(1.35rem, 3vw, 1.9rem); color:var(--flame);
@@ -751,6 +760,7 @@ body > *:not(#petal-canvas):not(.moon):not(.moon-halo):not(.mist):not(.fireflies
   .hanko{ width:38px; height:38px; font-size:.9rem; border-width:2.5px; border-radius:9px; }
   .sc-breath span{ width:13px; }
 
+  .hero-kanji{ display:none; }
   .section{ padding:clamp(44px,10vw,64px) 0; }
   .section-sub a{ display:inline-block; padding-block:5px; }
   .section-title{ font-size:clamp(1.5rem,7.4vw,2.1rem); }
