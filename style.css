@@ -446,7 +446,7 @@ body > *:not(#petal-canvas):not(.moon):not(.moon-halo):not(.mist):not(.fireflies
 /* ---------- proof of work ---------- */
 .work{ background:linear-gradient(180deg, rgba(124,79,208,.10), transparent 58%); }
 
-.work-grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; }
+.work-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
 
 .work{
   position:relative; overflow:hidden;
