@@ -455,7 +455,7 @@ body > *:not(#petal-canvas):not(.moon):not(.moon-halo):not(.mist):not(.fireflies
 /* ---------- proof of work ---------- */
 .work{ background:linear-gradient(180deg, rgba(124,79,208,.10), transparent 58%); }
 
-.work-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
+.work-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(178px, 1fr)); gap:18px; }
 
 .work{
   position:relative; overflow:hidden;
@@ -679,7 +679,7 @@ body > *:not(#petal-canvas):not(.moon):not(.moon-halo):not(.mist):not(.fireflies
 /* ================= RESPONSIVE ================= */
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1040px){
-  .work-grid{ grid-template-columns:repeat(3, 1fr); }
+  .work-grid{ grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); }
   .kokyu-grid{ grid-template-columns:1fr; }
 }
 
